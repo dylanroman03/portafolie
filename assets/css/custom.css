@@ -1,25 +1,113 @@
-/*:root {*/
-/*    --color-bg: #0a1122;*/
-/*    --color-primary: #3b82f6; !* azul tailwind *!*/
-/*    --color-primary-hover: #2563eb;*/
-/*    --color-navbar: #0a1122;*/
-/*}*/
-
-/*body {*/
-/*    background-color: var(--color-bg);*/
-/*}*/
-
 :root {
-    --color-bg: #f8fafc;
-    --color-navbar: #e3fafc;
-    --color-primary: #a5d8ff;
-    --color-primary-hover: #74c0fc;
-    --color-secondary: #ffd6fa;
-    --color-card: #ffffff;
-    --color-border: #dee2e6;
-    --color-text-main: #4b4b4b;
+    --color-bg: #F7FAFD;
+    --color-navbar: #F7FAFD;
+    --color-card: #FFFFFF;
+    --color-border: #c9cbd5;
+    --color-primary: #e85a38;
+    --color-primary-hover: #c54c2f;
+    --color-secondary: #2b2a2a;
+    --color-title: #232B38;
+    --color-text: #1d1d23;
+    --color-text-secondary: #2b2a2a;
+    --color-icon-secondary: #D1D5DB;
 }
 body {
     background: var(--color-bg);
-    color: var(--color-text-main);
+    color: var(--color-text);
 }
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+div.rounded-xl:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    color: var(--color-primary) !important;
+    transition: color 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.12);
+    transition: transform 0.3s ease;
+}
+
+#navbar {
+    background-color: var(--color-navbar);
+    background-opacity: 0.8; /* Initial transparency */
+    transition: background-opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-opacity: 1; /* Full opacity when scrolled */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-navbar);
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 50;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    #nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    #nav-menu .nav-link {
+        display: block;
+        padding: 0.5rem;
+        color: var(--color-title) !important;
+    }
+
+    #nav-menu .nav-link:hover {
+        color: var(--color-primary) !important;
+        background-color: rgba(0, 0, 0, 0.1); /* Optional: Add background for better visibility */
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+#nav-menu {
+    display: flex;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
