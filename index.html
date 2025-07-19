@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dylan Buitrago | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="assets/css/custom.css"/>
+</head>
+<body class="font-mono min-h-screen text-[#e5e7eb]" style="background: var(--color-bg)">
+<!-- Navbar fijo -->
+<nav class="sticky top-0 z-50 [background-color:var(--color-navbar)] bg-opacity-95 w-full">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-5 px-6">
+        <ul class="flex gap-8 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="#experience" class="hover:text-blue-400 transition">Experiences</a></li>
+            <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+            <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
+            <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+        <button class="[background-color:var(--color-primary)] hover:[background-color:var(--color-primary-hover)] text-white px-5 py-2 rounded-lg transition ml-4">
+            <i class="fa-regular fa-file"></i>
+            Resume
+        </button>
+    </div>
+</nav>
+
+<!-- Hero principal -->
+<main class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 min-h-[calc(100vh-80px)]">
+    <!-- Texto principal -->
+    <section class="flex-1">
+        <p class="text-blue-400 mb-2">Hi There! I'm</p>
+        <h1 class="text-5xl font-extrabold mb-2 text-white">
+            <span class="font-mono tracking-wider">Dylan Buitrago</span>
+        </h1>
+        <h2 class="text-2xl md:text-2xl font-light text-gray-300 mb-6">
+            Mobile &amp; Full-Stack Developer, Software Engineering Student
+        </h2>
+        <p class="text-gray-400 mb-8">
+            With 5+ years of experience in software development.
+            My passion lies in crafting seamless user experiences and building robust mobile/web apps.
+        </p>
+        <div class="flex gap-6 items-end mb-8">
+            <a href="#"
+               class="[background-color:var(--color-primary)] hover:[background-color:var(--color-primary-hover)] text-white px-6 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-envelope"></i>
+                Contact Me
+            </a>
+            <a href="#" class="text-2xl text-gray-400 hover:text-blue-400" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="#" class="text-2xl text-gray-400 hover:text-blue-400" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+    <!-- Imagen o código simulado -->
+    <section class="flex-1 flex justify-center">
+        <img src="assets/images/hero.png" alt="Hero" class="rounded-xl shadow-lg max-w-full border border-gray-500/40"/>
+    </section>
+</main>
+
+<!-- About Me Section -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12">
+    <div class="flex-1">
+        <!-- Título y línea -->
+        <div class="flex items-center gap-4 mb-2">
+            <h2 class="text-3xl font-bold text-white">About Me</h2>
+            <span class="hidden md:inline-block flex-1 h-px bg-gray-600"></span>
+        </div>
+        <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
+        <!-- Descripción -->
+        <p class="text-gray-300 mb-4">
+            As a software developer with 5+ years of experience, self-taught and responsible, passionate about
+            challenges, specialized in the development of mobile and web applications, I bring a strong set of skills in
+            Flutter, Ionic/Angular, NodeJS, SQL, etc.
+        </p>
+        <p class="text-gray-300 mb-4">
+            I have focused on full application development, from conception to deployment in the Play Store. My ability
+            to quickly understand new technologies has allowed me to excel in various software development roles. I am
+            motivated to continue growing, learning, and contributing to innovative projects in the field.
+        </p>
+        <!-- Educación -->
+        <div class="flex items-center gap-2 mb-1">
+            <i class="fa-solid fa-graduation-cap [color:var(--color-primary)]"></i>
+            <span class="font-semibold">Education</span>
+            <span class="ml-3 text-sm text-gray-400 font-mono">2022 - now</span>
+            <span class="flex-1 h-px bg-gray-600 ml-4"></span>
+        </div>
+        <div class="text-gray-400 ml-6">
+            Currently, I am pursuing a degree in Computer Engineering to strengthen and formalize my knowledge in the
+            field of technology.
+        </div>
+    </div>
+    <!-- Foto a la derecha con marco blanco (igual que antes) -->
+    <div class="flex-1 flex justify-center md:justify-end">
+        <div class="relative">
+            <img src="assets/images/about.jpg" alt="Dylan Buitrago"
+                 class="rounded-lg w-72 h-72 object-cover relative z-10 border border-gray-400"/>
+            <span class="absolute top-4 left-4 w-full h-full border-2 border-white rounded-lg z-0"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="experience" class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12">
+    <!--<section id="experience" class="max-w-4xl mx-auto px-6 py-20">-->
+    <!-- Título y línea -->
+    <div class="flex-1">
+        <div class="flex items-center gap-4 mb-2">
+            <h2 class="text-3xl font-bold text-white">Work Experience</h2>
+            <span class="hidden md:inline-block flex-1 h-px bg-gray-600"></span>
+        </div>
+        <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
+
+        <!-- Cards de experiencia: uno por fila -->
+        <div class="flex flex-col gap-6">
+            <div class="border border-gray-700 rounded-xl bg-[#0d1424] p-6 shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-briefcase [color:var(--color-primary)]"></i>
+                    <span class="font-semibold text-lg text-white">Mobile Developer</span>
+                </div>
+                <div class="text-gray-400 font-mono text-sm mb-1">ADN Software | Semi-Remote</div>
+                <div class="text-gray-500 font-mono text-xs mb-2">Dec 2019 - Present</div>
+                <p class="text-gray-300 text-sm mb-4">
+                    Currently working as a Mobile Developer at ADN-Software, where I
+                    specialize in mobile and web application development. I have a deep
+                    understanding of Flutter, Ionic/Angular, and NodeJS, and I use these
+                    technologies to create high-quality software solutions.
+                </p>
+                <div class="mb-1 font-semibold text-[color:var(--color-primary)] text-sm uppercase tracking-wide">Key
+                    Accomplishments
+                </div>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1 text-sm">
+                    <li>Developed and maintained multiple cross-platform mobile applications using Flutter.</li>
+                    <li>Implemented RESTful APIs for seamless data integration and user authentication.</li>
+                    <li>Quickly adapted to new technologies and excelled in various software development roles.</li>
+                </ul>
+            </div>
+            <!-- Card 2 -->
+            <!--            <div class="border border-gray-700 rounded-xl bg-[#0d1424] p-6 shadow-sm">-->
+            <!--                <div class="flex items-center gap-2 mb-2">-->
+            <!--                    <i class="fa-solid fa-briefcase [color:var(&#45;&#45;color-primary)]"></i>-->
+            <!--                    <span class="font-semibold text-lg text-white">Mobile Developer</span>-->
+            <!--                </div>-->
+            <!--                <div class="text-gray-400 font-mono text-sm mb-1">SoftDev Solutions | Medellín, Colombia</div>-->
+            <!--                <div class="text-gray-500 font-mono text-xs mb-2">Aug 2021 - Dec 2022</div>-->
+            <!--                <p class="text-gray-300 text-sm">-->
+            <!--                    Developed cross-platform mobile apps with Flutter and integrated RESTful APIs, improving client-->
+            <!--                    engagement and user retention.-->
+            <!--                </p>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+    <!-- Título y descripción -->
+    <h2 class="text-3xl font-bold text-white mb-1">Projects</h2>
+    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-4"></div>
+    <p class="text-gray-400 mb-10 max-w-8xl">
+        Here are some of the projects I've worked on, showcasing my skills in various technologies and problem domains.
+    </p>
+    <!-- Grid de proyectos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card Proyecto 1 -->
+        <div class="rounded-xl border border-gray-700 bg-[#16213a] overflow-hidden flex flex-col">
+            <div class="bg-gradient-to-tr from-blue-600 to-blue-400 h-40 flex items-center justify-center">
+                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-bold text-lg text-white mb-1">MSR Tailor Store</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                    A full-stack application with React and Node.js for order placement and checkout functionality for a
+                    tailor store.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">React</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Node.js</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Express</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">MongoDB</span>
+                </div>
+                <!-- Botones pequeños, alineados horizontalmente -->
+                <div class="mt-auto flex gap-3">
+                    <!-- Botón GitHub solo icono -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Github" aria-label="Github">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
+                    </a>
+                    <!-- Botón Play Store -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Play Store" aria-label="Play Store">
+                        <i class="fa-brands fa-google-play text-base"></i> Play Store
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Card Proyecto 2 -->
+        <div class="rounded-xl border border-gray-700 bg-[#16213a] overflow-hidden flex flex-col">
+            <div class="bg-gradient-to-tr from-blue-600 to-blue-400 h-40 flex items-center justify-center">
+                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-bold text-lg text-white mb-1">MSR Tailor Store</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                    A full-stack application with React and Node.js for order placement and checkout functionality for a
+                    tailor store.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">React</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Node.js</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Express</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">MongoDB</span>
+                </div>
+                <!-- Botones pequeños, alineados horizontalmente -->
+                <div class="mt-auto flex gap-3">
+                    <!-- Botón GitHub solo icono -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Github" aria-label="Github">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
+                    </a>
+                    <!-- Botón Play Store -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Play Store" aria-label="Play Store">
+                        <i class="fa-brands fa-google-play text-base"></i> Play Store
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-xl border border-gray-700 bg-[#16213a] overflow-hidden flex flex-col">
+            <div class="bg-gradient-to-tr from-blue-600 to-blue-400 h-40 flex items-center justify-center">
+                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-bold text-lg text-white mb-1">MSR Tailor Store</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                    A full-stack application with React and Node.js for order placement and checkout functionality for a
+                    tailor store.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">React</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Node.js</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">Express</span>
+                    <span class="bg-[#222b45] text-blue-300 rounded-full px-3 py-1 text-xs font-mono">MongoDB</span>
+                </div>
+                <!-- Botones pequeños, alineados horizontalmente -->
+                <div class="mt-auto flex gap-3">
+                    <!-- Botón GitHub solo icono -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Github" aria-label="Github">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
+                    </a>
+                    <!-- Botón Play Store -->
+                    <a href="#"
+                       class="border border-gray-500 rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[#203063] transition"
+                       title="Play Store" aria-label="Play Store">
+                        <i class="fa-brands fa-google-play text-base"></i> Play Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="max-w-7xl mx-auto px-6 py-20">
+    <!-- Título -->
+    <h2 class="text-3xl font-bold text-white mb-1">Skills</h2>
+    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
+    <div class="mb-8">
+        <p class="text-gray-300 text-sm mb-4">
+            Some of my skills and technologies I work with regularly. I am always eager to learn new tools and frameworks
+        </p>
+    </div>
+
+    <!-- Grid de iconos -->
+    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-8 justify-items-center items-center">
+        <div class="flex flex-col items-center">
+            <i class="fab fa-flutter text-blue-400 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Flutter</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-node-js text-green-500 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Node.js</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-angular text-red-500 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Angular</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="assets/icons/ionic.svg" alt="Ionic" class="w-12 h-12" />
+            <span class="text-xs text-gray-400 mt-2">Ionic</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-js-square text-yellow-400 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-python text-blue-600 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Python</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fa-solid fa-database text-red-400 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">SQL DB</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-git-alt text-orange-400 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Git</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fa-brands fa-docker text-blue-400 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Docker</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fa-brands fa-linux text-yellow-500 text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Linux</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i class="fab fa-rust text-white text-5xl"></i>
+            <span class="text-xs text-gray-400 mt-2">Rust</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+    <!-- Título y descripción -->
+    <h2 class="text-3xl font-bold text-white mb-1">Contact me</h2>
+    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-4"></div>
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Columna izquierda: info de contacto -->
+        <div>
+            <div class="text-gray-400 mb-6 text-sm">Send me a message, I’ll get back to you as soon as possible.</div>
+            <div class="flex items-center gap-3 mb-3">
+                <i class="fa-solid fa-envelope text-blue-400"></i>
+                <span class="font-mono text-gray-300">Email</span>
+            </div>
+            <div class="ml-7 mb-4 text-gray-400 text-sm select-all">romand.buitrago+dev@gmail.com</div>
+
+            <div class="flex items-center gap-3 mb-3">
+                <i class="fa-solid fa-location-dot text-blue-400"></i>
+                <span class="font-mono text-gray-300">Location</span>
+            </div>
+            <div class="ml-7 mb-4 text-gray-400 text-sm">Táchira, Venezuela</div>
+
+            <div class="font-semibold text-white mt-8 mb-2">My Links</div>
+            <div class="flex gap-3 mt-3">
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#181f2a] hover:bg-blue-700 transition text-gray-400 hover:text-white text-lg"><i class="fab fa-github"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#181f2a] hover:bg-blue-700 transition text-gray-400 hover:text-white text-lg"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-[#181f2a] hover:bg-blue-700 transition text-gray-400 hover:text-white text-lg"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <!-- Columna derecha: formulario -->
+        <div>
+            <form class="bg-[#10182b] border border-gray-700 rounded-xl px-8 py-8 flex flex-col gap-5 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-white font-mono text-sm mb-1">Your Name</label>
+                        <input type="text" placeholder="John Smith" class="w-full bg-[#161f35] border border-gray-600 rounded-lg px-4 py-2 text-gray-200 outline-none focus:border-blue-400 transition" />
+                    </div>
+                    <div>
+                        <label class="block text-white font-mono text-sm mb-1">Your Email</label>
+                        <input type="email" placeholder="john_smith@example.com" class="w-full bg-[#161f35] border border-gray-600 rounded-lg px-4 py-2 text-gray-200 outline-none focus:border-blue-400 transition" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-white font-mono text-sm mb-1">Subject</label>
+                    <input type="text" placeholder="How can I help you?" class="w-full bg-[#161f35] border border-gray-600 rounded-lg px-4 py-2 text-gray-200 outline-none focus:border-blue-400 transition" />
+                </div>
+                <div>
+                    <label class="block text-white font-mono text-sm mb-1">Message</label>
+                    <textarea rows="4" placeholder="Your message here..." class="w-full bg-[#161f35] border border-gray-600 rounded-lg px-4 py-2 text-gray-200 outline-none focus:border-blue-400 transition resize-none"></textarea>
+                </div>
+                <button type="submit" class="[background-color:var(--color-primary)] text-white rounded-lg py-2 font-semibold hover:opacity-90 transition mt-4">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
