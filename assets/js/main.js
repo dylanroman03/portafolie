@@ -46,8 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         observer.observe(el);
     });
+//
+//     const hackText = document.getElementById('hack-text');
+//     const targetText = "Mobile & Full-Stack Developer, Software Engineering Student";
+//     let currentText = '';
+//     let index = 0;
+//
+//     function getRandomChar() {
+//         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+//         return chars.charAt(Math.floor(Math.random() * chars.length));
+//     }
+//
+//     function updateText() {
+//         if (index < targetText.length) {
+//             currentText = targetText.slice(0, index) + getRandomChar().repeat(targetText.length - index);
+//             hackText.textContent = currentText;
+//             index++;
+//             setTimeout(updateText, 50); // Speed of random characters
+//         } else {
+//             let finalIndex = 0;
+//             const interval = setInterval(() => {
+//                 if (finalIndex < targetText.length) {
+//                     currentText = targetText.slice(0, finalIndex + 1) + getRandomChar().repeat(targetText.length - finalIndex - 1);
+//                     hackText.textContent = currentText;
+//                     finalIndex++;
+//                 } else {
+//                     clearInterval(interval);
+//                     hackText.textContent = targetText; // Ensure final text is exact
+//                 }
+//             }, 100); // Speed of reveal
+//         }
+//     }
+//
+//     updateText();
 });
-
+//
 // Form submission feedback (if using contact form with id 'contact-form')
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {

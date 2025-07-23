@@ -11,20 +11,24 @@
 </head>
 <body class="font-mono min-h-screen" style="background: var(--color-bg); color: var(--color-text)">
 
-<nav id="navbar" class="sticky top-0 z-50 [background-color:var(--color-navbar)] bg-opacity-80 w-full transition-all duration-300">
+<nav id="navbar"
+     class="sticky top-0 z-50 [background-color:var(--color-navbar)] bg-opacity-80 w-full transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-5 px-6">
         <div class="flex items-center">
             <!-- Hamburger Icon -->
             <button id="menu-toggle" class="md:hidden text-[var(--color-title)] focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
             <!-- Menu Items -->
             <ul id="nav-menu" class="flex gap-8 text-sm md:flex md:items-center md:space-x-8 md:ml-4">
                 <li><a href="#" class="nav-link transition" style="color:var(--color-title)">Home</a></li>
                 <li><a href="#about" class="nav-link transition" style="color:var(--color-title)">About</a></li>
-                <li><a href="#experience" class="nav-link transition" style="color:var(--color-title)">Experiences</a></li>
+                <li><a href="#experience" class="nav-link transition" style="color:var(--color-title)">Experiences</a>
+                </li>
                 <li><a href="#projects" class="nav-link transition" style="color:var(--color-title)">Projects</a></li>
                 <li><a href="#skills" class="nav-link transition" style="color:var(--color-title)">Skills</a></li>
                 <li><a href="#contact" class="nav-link transition" style="color:var(--color-title)">Contact</a></li>
@@ -47,6 +51,8 @@
         </h1>
         <h2 class="text-2xl md:text-2xl font-light" style="color:var(--color-secondary)">Mobile &amp; Full-Stack
             Developer, Software Engineering Student</h2>
+        <!--        <h2 id="hack-text" class="text-2xl md:text-2xl font-light" style="color:var(&#45;&#45;color-secondary)">-->
+        <!--        </h2>-->
         <p class="mb-8" style="color:var(--color-text-secondary)">
             With 5+ years of experience in software development.
             My passion lies in crafting seamless user experiences and building robust mobile/web apps.
@@ -57,9 +63,11 @@
                 <i class="fa-solid fa-envelope"></i>
                 Contact Me
             </a>
-            <a href="https://github.com/dylanroman03" class="text-2xl" style="color:var(--color-text-secondary)" aria-label="GitHub"><i
+            <a href="https://github.com/dylanroman03" class="text-2xl" style="color:var(--color-text-secondary)"
+               aria-label="GitHub"><i
                     class="fab fa-github"></i></a>
-            <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7" class="text-2xl" style="color:var(--color-text-secondary)" aria-label="LinkedIn"><i
+            <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7" class="text-2xl"
+               style="color:var(--color-text-secondary)" aria-label="LinkedIn"><i
                     class="fab fa-linkedin"></i></a>
         </div>
     </section>
@@ -71,7 +79,8 @@
 </main>
 
 <!-- About Me Section -->
-<section id="about" class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
+<section id="about"
+         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
     <div class="flex-[2]">
         <!-- Título y línea -->
         <div class="flex items-center gap-4 mb-2">
@@ -115,7 +124,8 @@
 </section>
 
 <!-- Work Experience Section -->
-<section id="experience" class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
+<section id="experience"
+         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
     <div class="flex-1">
         <div class="flex items-center gap-4 mb-2">
             <h2 class="text-3xl font-bold" style="color:var(--color-title)">Work Experience</h2>
@@ -153,23 +163,30 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Projects</h2>
-    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-4"></div>
+<section id="projects"
+         class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
+    <div class="flex items-center gap-4 mb-2">
+        <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Projects</h2>
+        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
+    </div>
     <p class="mb-10 max-w-8xl" style="color:var(--color-text-secondary)">
         Here are some of the projects I've worked on, showcasing my skills in various technologies and problem domains.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
              style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] h-40 flex items-center justify-center">
-                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
+            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
+                <img src="assets/images/projects/1/miniatura.png"
+                     alt="Project"
+                     class="w-60 h-44 object-cover object-center"
+                />
             </div>
             <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">ADN Mobile - App de Ventas</h3>
                 <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    A full-stack application with React and Node.js for order placement and checkout functionality for a
-                    tailor store.
+                    A real-time app for managing orders, inventory, customers, and payments. Key features: debt-based
+                    customer blocking, multi-business support, currency conversion, Bluetooth receipt printing, and
+                    saved carts.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
@@ -177,12 +194,12 @@
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQLite</span>
                 </div>
                 <div class="mt-auto flex gap-3">
-                    <a href="#"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-github text-lg"></i> GitHub
-                    </a>
-                    <a href="#"
+                    <!--                    <a href="#"-->
+                    <!--                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(&#45;&#45;color-border)] transition"-->
+                    <!--                       style="border-color:var(&#45;&#45;color-border); color:var(&#45;&#45;color-title)">-->
+                    <!--                        <i class="fa-brands fa-github text-lg"></i> GitHub-->
+                    <!--                    </a>-->
+                    <a href="https://play.google.com/store/apps/details?id=com.adnsoftware.adn_software" target="_blank"
                        class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
                        style="border-color:var(--color-border); color:var(--color-title)">
                         <i class="fa-brands fa-google-play text-base"></i> Play Store
@@ -192,14 +209,18 @@
         </div>
         <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
              style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] h-40 flex items-center justify-center">
-                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
+            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
+                <img src="assets/images/projects/2/miniatura.jpeg"
+                     alt="Project"
+                     class="w-60 h-44 object-cover object-center"
+                />
             </div>
             <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">Ciclope - OCR App</h3>
                 <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    A full-stack application with React and Node.js for order placement and checkout functionality for a
-                    tailor store.
+                    Scans invoices and extracts key data to auto-fill forms. Syncs with external systems, streamlining
+                    accounting processes. Fast, accurate, and seamless integration. Ideal for automating financial data
+                    capture. Powered by advanced OCR technology and IA.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
@@ -209,16 +230,6 @@
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">OpenAI</span>
                 </div>
                 <div class="mt-auto flex gap-3">
-                    <a href="#"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-github text-lg"></i> GitHub
-                    </a>
-                    <a href="#"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-google-play text-base"></i> Play Store
-                    </a>
                 </div>
             </div>
         </div>
@@ -230,8 +241,9 @@
             <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">Pharmacy AI bot</h3>
                 <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    A full-stack application with React and Node.js for order placement and checkout functionality for a
-                    tailor store.
+                    An intelligent chatbot trained to recommend in-stock pharmacy products based on customer needs.
+                    Leverages real-time inventory data to provide accurate suggestions, improving customer experience
+                    and sales efficiency.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Node.js</span>
@@ -241,15 +253,43 @@
                     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">OpenAI</span>
                 </div>
                 <div class="mt-auto flex gap-3">
-                    <a href="#"
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
+             style="border-color:var(--color-border); background:var(--color-card)">
+            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
+                <img src="assets/images/projects/4/miniatura.png"
+                     alt="Project"
+                     class="w-60 h-44 object-full object-center"
+                />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">EasyResend - Dart Package for Resend
+                    API</h3>
+                <p class="text-sm mb-4" style="color:var(--color-secondary)">
+                    A Dart implementation of the Forwarding API for seamless email integration. Simplifies email sending
+                    and error handling in Flutter and Dart backend projects. Lightweight, efficient, and easy for
+                    developers to use.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
+                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
+                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">API</span>
+                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Open Source</span>
+                </div>
+                <div class="mt-auto flex gap-3">
+                    <a href="https://github.com/dylanroman03/Easy_Resend" target="_blank"
                        class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
                        style="border-color:var(--color-border); color:var(--color-title)">
                         <i class="fa-brands fa-github text-lg"></i> GitHub
                     </a>
-                    <a href="#"
+                    <a href="https://pub.dev/packages/easy_resend" target="_blank"
                        class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
                        style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-google-play text-base"></i> Play Store
+                        Pub Dev
                     </a>
                 </div>
             </div>
@@ -259,7 +299,10 @@
 
 <!-- Skills Section -->
 <section id="skills" class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Skills</h2>
+    <div class="flex items-center gap-4 mb-2">
+        <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Skills</h2>
+        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
+    </div>
     <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
     <div class="mb-8">
         <p class="text-sm mb-4" style="color:var(--color-secondary)">
@@ -316,8 +359,12 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Contact me</h2>
+<section id="contact"
+         class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
+    <div class="flex items-center gap-4 mb-2">
+        <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Contact me</h2>
+        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
+    </div>
     <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-4"></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 scroll-reveal opacity-0 translate-y-8 transition duration-700">
         <div>
@@ -338,11 +385,14 @@
             <div class="ml-7 mb-4 text-sm" style="color:var(--color-text-secondary)">Táchira, Venezuela</div>
             <div class="font-semibold mt-8 mb-2" style="color:var(--color-title)">My Links</div>
             <div class="flex gap-3 mt-3">
-                <a href="https://github.com/dylanroman03" class="w-10 h-10 flex items-center justify-center rounded-full"
+                <a href="https://github.com/dylanroman03"
+                   class="w-10 h-10 flex items-center justify-center rounded-full"
                    style="background:var(--color-border); color:var(--color-title)"><i class="fab fa-github"></i></a>
-                <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7" class="w-10 h-10 flex items-center justify-center rounded-full"
+                <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7"
+                   class="w-10 h-10 flex items-center justify-center rounded-full"
                    style="background:var(--color-border); color:var(--color-title)"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:romand.buitrago+dev@gmail.com" class="w-10 h-10 flex items-center justify-center rounded-full"
+                <a href="mailto:romand.buitrago+dev@gmail.com"
+                   class="w-10 h-10 flex items-center justify-center rounded-full"
                    style="background:var(--color-border); color:var(--color-title)"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
