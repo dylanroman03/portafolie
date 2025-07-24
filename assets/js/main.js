@@ -3,11 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (menuToggle && navMenu) {
+        // Toggle menú móvil
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
+        // Cierra el menú móvil al hacer click en una opción
         navMenu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth < 768) { // Solo en móvil
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Forzar estado correcto al cambiar de tamaño
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768) {
                 navMenu.classList.remove('hidden');
@@ -23,30 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 navMenu.classList.add('hidden');
             }
         });
-
     }
 
     // Scroll effect for navbar
-    document.addEventListener('scroll', () => {
-        const navbar = document.getElementById('navbar');
-        if (navbar) {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        }
-    });
-
-    // document.addEventListener('click', function(e) {
-    //     // Si el menú está abierto, en mobile, y haces click fuera del menú y del botón
-    //     if (
-    //         !navMenu.classList.contains('hidden') &&
-    //         window.innerWidth < 768 &&
-    //         !navMenu.contains(e.target) &&
-    //         e.target !== menuToggle
-    //     ) {
-    //         navMenu.classList.add('hidden');
+    // document.addEventListener('scroll', () => {
+    //     const navbar = document.getElementById('navbar');
+    //     if (navbar) {
+    //         if (window.scrollY > 50) {
+    //             navbar.classList.add('scrolled');
+    //         } else {
+    //             navbar.classList.remove('scrolled');
+    //         }
     //     }
     // });
 
@@ -148,7 +137,9 @@ function showProjectModal(project) {
             overlay.classList.remove('hidden');
 
             const galleryLength = {
-                "adn_mobile": 3,
+                "adn_mobile": 6,
+                "easy_resend": 1,
+                "ciclope": 1,
             };
 
             const images = Array.from({length: galleryLength[project]}, (_, i) =>

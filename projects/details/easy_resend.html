@@ -1,27 +1,55 @@
 <!-- Galería de imágenes -->
-<img src="assets/images/projects/adn_mobile/miniatura.png" alt="Project Image"
-     class="object-contain h-full max-w-full transition-all duration-300" id="main-gallery-image">
+<div class="relative mb-10 w-full h-56 md:h-72 flex items-center justify-center rounded-t-2xl overflow-hidden">
+    <!-- Flecha izquierda -->
+    <!--    <button id="gallery-prev"-->
+    <!--            class="btn-no-animation absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-[var(&#45;&#45;color-title)] rounded-full p-2 shadow-md z-10 transition"-->
+    <!--            aria-label="Anterior">-->
+    <!--        <i class="fa-solid fa-chevron-left"></i>-->
+    <!--    </button>-->
+
+    <!-- Imagen principal -->
+    <img id="main-gallery-image"
+         src="assets/images/projects/easy_resend/1.png"
+         alt="Project Image"
+         class="object-contain h-full max-w-full transition-all duration-500 z-0">
+
+    <!-- Flecha derecha -->
+    <!--    <button id="gallery-next"-->
+    <!--            class="btn-no-animation absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-[var(&#45;&#45;color-title)] rounded-full p-2 shadow-md z-10 transition"-->
+    <!--            aria-label="Siguiente">-->
+    <!--        <i class="fa-solid fa-chevron-right"></i>-->
+    <!--    </button>-->
+
+    <!-- Indicadores -->
+    <div id="gallery-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10"></div>
+</div>
 <!-- Si quieres más imágenes, puedes poner miniaturas o flechas aquí -->
 
 <!-- Contenido principal -->
 <!-- Título -->
-<h3 class="font-bold text-2xl mb-3" style="color:var(--color-title)">ADN Mobile - App de Ventas</h3>
 
+<!-- Contenido principal -->
+<!-- Título -->
+<div class="flex items-center justify-between mb-3">
+    <h3 class="font-bold text-2xl" style="color:var(--color-title)">EasyResend - Resend Dart Package</h3>
+    <span class="flex items-center gap-1 text-green-600 font-semibold text-sm">
+    <i class="fa-solid fa-rocket"></i>
+    on production
+  </span>
+</div>
 <!-- Etiquetas -->
 <div class="flex flex-wrap gap-2 mb-6">
-    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
     <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
-    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQLite</span>
-    <!-- ...más etiquetas -->
+    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">API</span>
+    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Open Source</span>
 </div>
 
 <!-- Información / cuerpo -->
 <div class="text-sm leading-relaxed" style="color:var(--color-secondary)">
     <p>
-        A real-time app for managing orders, inventory, customers, and payments.<br>
-        Key features: debt-based customer blocking, multi-business support, currency conversion, Bluetooth receipt
-        printing, and saved carts.<br>
+        A Dart implementation of the Resend API for seamless email integration. Simplifies email sending
+        and error handling in Flutter and Dart backend projects. Lightweight, efficient, and easy for
+        developers to use.
         <br>
-        <b>Extra:</b> Puedes agregar aquí más información detallada, links, tecnologías, etc.
     </p>
 </div>
