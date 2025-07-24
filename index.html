@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Dylan Buitrago | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="assets/css/custom.css"/>
@@ -80,86 +81,18 @@
 
 <!-- About Me Section -->
 <section id="about"
-         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <div class="flex-[2]">
-        <!-- Título y línea -->
-        <div class="flex items-center gap-4 mb-2">
-            <h2 class="text-3xl font-bold" style="color:var(--color-title)">About Me</h2>
-            <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
-        </div>
-        <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
-        <!-- Descripción -->
-        <p class="mb-4" style="color:var(--color-secondary)">
-            As a software developer with 5+ years of experience, self-taught and responsible, passionate about
-            challenges, specialized in the development of mobile and web applications, I bring a strong set of skills in
-            Flutter, Ionic/Angular, NodeJS, SQL, etc.
-        </p>
-        <p class="mb-4" style="color:var(--color-secondary)">
-            I have focused on full application development, from conception to deployment in the Play Store. My ability
-            to quickly understand new technologies has allowed me to excel in various software development roles. I am
-            motivated to continue growing, learning, and contributing to innovative projects in the field.
-        </p>
-        <!-- Educación -->
-        <div class="flex items-center gap-2 mb-1">
-            <i class="fa-solid fa-graduation-cap [color:var(--color-primary)]"></i>
-            <span class="font-semibold" style="color:var(--color-title)">Education</span>
-            <span class="ml-3 text-sm font-mono" style="color:var(--color-text-secondary)">2022 - now</span>
-            <span class="flex-1 h-px ml-4" style="background:var(--color-border)"></span>
-        </div>
-        <div class="ml-6" style="color:var(--color-text-secondary)">
-            Currently, I am pursuing a degree in Computer Engineering to strengthen and formalize my knowledge in the
-            field of technology.
-        </div>
-    </div>
-    <!-- Foto a la derecha con marco blanco (igual que antes) -->
-    <div class="flex-[1] flex justify-center md:justify-end">
-        <div class="relative">
-            <img src="assets/images/about.jpg" alt="Dylan Buitrago"
-                 class="rounded-lg w-72 h-72 object-cover relative z-10 border"
-                 style="border-color:var(--color-title)"/>
-            <span class="absolute top-4 left-4 w-full h-full border-2"
-                  style="border-color:var(--color-title); border-radius:0.75rem; z-index:0"></span>
-        </div>
-    </div>
+         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700"
+         hx-get="sections/about.html"
+         hx-trigger="load"
+         hx-swap="innerHTML">
 </section>
 
 <!-- Work Experience Section -->
 <section id="experience"
-         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <div class="flex-1">
-        <div class="flex items-center gap-4 mb-2">
-            <h2 class="text-3xl font-bold" style="color:var(--color-title)">Work Experience</h2>
-            <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
-        </div>
-        <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
-        <div class="flex flex-col gap-6">
-            <div class="border rounded-xl p-6 shadow-sm scroll-reveal opacity-0 translate-y-8 transition duration-700"
-                 style="border-color:var(--color-border); background:var(--color-card)">
-                <div class="flex items-center gap-2 mb-2">
-                    <i class="fa-solid fa-briefcase [color:var(--color-primary)]"></i>
-                    <span class="font-semibold text-lg" style="color:var(--color-title)">Mobile Developer</span>
-                </div>
-                <div class="font-mono text-sm mb-1" style="color:var(--color-text-secondary)">ADN Software |
-                    Semi-Remote
-                </div>
-                <div class="font-mono text-xs mb-2" style="color:var(--color-secondary)">Dec 2019 - Present</div>
-                <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    Currently working as a Mobile Developer at ADN-Software, where I
-                    specialize in mobile and web application development. I have a deep
-                    understanding of Flutter, Ionic/Angular, and NodeJS, and I use these
-                    technologies to create high-quality software solutions.
-                </p>
-                <div class="mb-1 font-semibold text-[color:var(--color-primary)] text-sm uppercase tracking-wide">Key
-                    Accomplishments
-                </div>
-                <ul class="list-disc pl-5 space-y-1 text-sm" style="color:var(--color-secondary)">
-                    <li>Developed and maintained multiple cross-platform mobile applications using Flutter.</li>
-                    <li>Implemented RESTful APIs for seamless data integration and user authentication.</li>
-                    <li>Quickly adapted to new technologies and excelled in various software development roles.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+         class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-start gap-12 scroll-reveal opacity-0 translate-y-8 transition duration-700"
+         hx-get="sections/experience.html"
+         hx-trigger="load"
+         hx-swap="innerHTML">
 </section>
 
 <!-- Projects Section -->
@@ -172,272 +105,27 @@
     <p class="mb-10 max-w-8xl" style="color:var(--color-text-secondary)">
         Here are some of the projects I've worked on, showcasing my skills in various technologies and problem domains.
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
-             style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
-                <img src="assets/images/projects/1/miniatura.png"
-                     alt="Project"
-                     class="w-60 h-44 object-cover object-center"
-                />
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-                <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">ADN Mobile - App de Ventas</h3>
-                <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    A real-time app for managing orders, inventory, customers, and payments. Key features: debt-based
-                    customer blocking, multi-business support, currency conversion, Bluetooth receipt printing, and
-                    saved carts.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQLite</span>
-                </div>
-                <div class="mt-auto flex gap-3">
-                    <!--                    <a href="#"-->
-                    <!--                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(&#45;&#45;color-border)] transition"-->
-                    <!--                       style="border-color:var(&#45;&#45;color-border); color:var(&#45;&#45;color-title)">-->
-                    <!--                        <i class="fa-brands fa-github text-lg"></i> GitHub-->
-                    <!--                    </a>-->
-                    <a href="https://play.google.com/store/apps/details?id=com.adnsoftware.adn_software" target="_blank"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-google-play text-base"></i> Play Store
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
-             style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
-                <img src="assets/images/projects/2/miniatura.jpeg"
-                     alt="Project"
-                     class="w-60 h-44 object-cover object-center"
-                />
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-                <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">Ciclope - OCR App</h3>
-                <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    Scans invoices and extracts key data to auto-fill forms. Syncs with external systems, streamlining
-                    accounting processes. Fast, accurate, and seamless integration. Ideal for automating financial data
-                    capture. Powered by advanced OCR technology and IA.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQLite</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">IA</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">OpenAI</span>
-                </div>
-                <div class="mt-auto flex gap-3">
-                </div>
-            </div>
-        </div>
-        <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
-             style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] h-40 flex items-center justify-center">
-                <img src="assets/images/project2.png" alt="Project 2" class="w-32 object-contain drop-shadow-lg"/>
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-                <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">Pharmacy AI bot</h3>
-                <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    An intelligent chatbot trained to recommend in-stock pharmacy products based on customer needs.
-                    Leverages real-time inventory data to provide accurate suggestions, improving customer experience
-                    and sales efficiency.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Node.js</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Javascript</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQL MariaDB</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">IA</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">OpenAI</span>
-                </div>
-                <div class="mt-auto flex gap-3">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="rounded-xl border overflow-hidden flex flex-col scroll-reveal opacity-0 translate-y-8 transition duration-700"
-             style="border-color:var(--color-border); background:var(--color-card)">
-            <div class="relative overflow-hidden h-40 flex items-center justify-center bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)]">
-                <img src="assets/images/projects/4/miniatura.png"
-                     alt="Project"
-                     class="w-60 h-44 object-full object-center"
-                />
-            </div>
-            <div class="p-6 flex-1 flex flex-col">
-                <h3 class="font-bold text-lg mb-1" style="color:var(--color-title)">EasyResend - Dart Package for Resend
-                    API</h3>
-                <p class="text-sm mb-4" style="color:var(--color-secondary)">
-                    A Dart implementation of the Forwarding API for seamless email integration. Simplifies email sending
-                    and error handling in Flutter and Dart backend projects. Lightweight, efficient, and easy for
-                    developers to use.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">API</span>
-                    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Open Source</span>
-                </div>
-                <div class="mt-auto flex gap-3">
-                    <a href="https://github.com/dylanroman03/Easy_Resend" target="_blank"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        <i class="fa-brands fa-github text-lg"></i> GitHub
-                    </a>
-                    <a href="https://pub.dev/packages/easy_resend" target="_blank"
-                       class="border rounded-lg px-3 py-1.5 text-sm font-semibold flex items-center gap-2 hover:bg-[var(--color-border)] transition"
-                       style="border-color:var(--color-border); color:var(--color-title)">
-                        Pub Dev
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div id="projects-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+         hx-get="projects/cards/all.html"
+         hx-trigger="load"
+         hx-swap="innerHTML">
     </div>
+
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <div class="flex items-center gap-4 mb-2">
-        <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Skills</h2>
-        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
-    </div>
-    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
-    <div class="mb-8">
-        <p class="text-sm mb-4" style="color:var(--color-secondary)">
-            Some of my skills and technologies I work with regularly. I am always eager to learn new tools and
-            frameworks
-        </p>
-    </div>
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-8 justify-items-center items-center">
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-flutter text-blue-400 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Flutter</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-node-js text-green-500 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Node.js</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-angular text-red-500 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Angular</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <img src="assets/icons/ionic.svg" alt="Ionic" class="skill-icon w-12 h-12"/>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Ionic</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-js-square text-yellow-400 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">JavaScript</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-python text-blue-600 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Python</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fa-solid fa-database text-red-400 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">SQL DB</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-git-alt text-orange-400 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Git</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fa-brands fa-docker text-[var(--color-primary)] text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Docker</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fa-brands fa-linux text-yellow-500 text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Linux</span>
-        </div>
-        <div class="flex flex-col items-center scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <i class="skill-icon fab fa-rust text-[var(--color-title)] text-5xl"></i>
-            <span class="text-xs mt-2" style="color:var(--color-secondary)">Rust</span>
-        </div>
-    </div>
+<section id="skills" class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700"
+         hx-get="sections/skills.html"
+         hx-trigger="load"
+         hx-swap="innerHTML">
 </section>
 
 <!-- Contact Section -->
 <section id="contact"
-         class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-    <div class="flex items-center gap-4 mb-2">
-        <h2 class="text-3xl font-bold mb-1" style="color:var(--color-title)">Contact me</h2>
-        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
-    </div>
-    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-4"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 scroll-reveal opacity-0 translate-y-8 transition duration-700">
-        <div>
-            <div class="mb-6 text-sm" style="color:var(--color-text-secondary)">
-                Send me a message, I’ll get back to you as soon as possible.
-            </div>
-            <div class="flex items-center gap-3 mb-3">
-                <i class="fa-solid fa-envelope text-[var(--color-primary)]"></i>
-                <span class="font-mono" style="color:var(--color-secondary)"><b>Email</b></span>
-            </div>
-            <div class="ml-7 mb-4 text-sm select-all" style="color:var(--color-text-secondary)">
-                romand.buitrago+dev@gmail.com
-            </div>
-            <div class="flex items-center gap-3 mb-3">
-                <i class="fa-solid fa-location-dot text-[var(--color-primary)]"></i>
-                <span class="font-mono" style="color:var(--color-secondary)"><b>Location</b></span>
-            </div>
-            <div class="ml-7 mb-4 text-sm" style="color:var(--color-text-secondary)">Táchira, Venezuela</div>
-            <div class="font-semibold mt-8 mb-2" style="color:var(--color-title)">My Links</div>
-            <div class="flex gap-3 mt-3">
-                <a href="https://github.com/dylanroman03"
-                   class="w-10 h-10 flex items-center justify-center rounded-full"
-                   style="background:var(--color-border); color:var(--color-title)"><i class="fab fa-github"></i></a>
-                <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7"
-                   class="w-10 h-10 flex items-center justify-center rounded-full"
-                   style="background:var(--color-border); color:var(--color-title)"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:romand.buitrago+dev@gmail.com"
-                   class="w-10 h-10 flex items-center justify-center rounded-full"
-                   style="background:var(--color-border); color:var(--color-title)"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="scroll-reveal opacity-0 translate-y-8 transition duration-700">
-            <form action="https://api.web3forms.com/submit" method="POST"
-                  class="rounded-xl px-8 py-8 flex flex-col gap-5 shadow-lg"
-                  style="background:var(--color-card); border:1px solid var(--color-border)">
-                <input type="hidden" name="access_key" value="c3331af5-62a3-4870-a384-29b0a38a1efc">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block font-mono text-sm mb-1" style="color:var(--color-title)">Your Name</label>
-                        <input type="text" placeholder="John Smith" name="name"
-                               class="w-full rounded-lg px-4 py-2 outline-none transition"
-                               style="background:var(--color-bg); border:1px solid var(--color-border); color:var(--color-title)"
-                               required/>
-                    </div>
-                    <div>
-                        <label class="block font-mono text-sm mb-1" style="color:var(--color-title)">Your Email</label>
-                        <input type="email" placeholder="john_smith@example.com" name="email"
-                               class="w-full rounded-lg px-4 py-2 outline-none transition"
-                               style="background:var(--color-bg); border:1px solid var(--color-border); color:var(--color-title)"
-                               required/>
-                    </div>
-                </div>
-                <div>
-                    <label class="block font-mono text-sm mb-1" style="color:var(--color-title)">Subject</label>
-                    <input type="text" placeholder="How can I help you?"
-                           class="w-full rounded-lg px-4 py-2 outline-none transition"
-                           style="background:var(--color-bg); border:1px solid var(--color-border); color:var(--color-title)"
-                           name="subject"/>
-                </div>
-                <div>
-                    <label class="block font-mono text-sm mb-1" style="color:var(--color-title)">Message</label>
-                    <textarea rows="4" placeholder="Your message here..."
-                              class="w-full rounded-lg px-4 py-2 outline-none transition resize-none"
-                              style="background:var(--color-bg); border:1px solid var(--color-border); color:var(--color-title)"
-                              name="message" required></textarea>
-                </div>
-                <button type="submit"
-                        class="[background-color:var(--color-primary)] text-white rounded-lg py-2 font-semibold hover:opacity-90 transition mt-4">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </div>
+         class="max-w-7xl mx-auto px-6 py-20 scroll-reveal opacity-0 translate-y-8 transition duration-700"
+         hx-get="sections/contact.html"
+         hx-trigger="load"
+         hx-swap="innerHTML">
 </section>
 
 <script src="assets/js/main.js"></script>

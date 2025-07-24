@@ -27,86 +27,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Scroll reveal effect (Intersection Observer)
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    const observer = new window.IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-8');
-                // Optional: add delay based on index for staggered effect
-                entry.target.style.transitionDelay = `${i * 100}ms`;
-                observer.unobserve(entry.target); // Animate only once
-            }
+    // Scroll reveal observer function
+    function observeScrollReveal() {
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        const observer = new window.IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    entry.target.style.transitionDelay = `${i * 100}ms`;
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.18
         });
-    }, {
-        threshold: 0.18 // Animate when 18% visible
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    // Initial call
+    observeScrollReveal();
+
+    // Re-observe after htmx swaps content (cards loaded)
+    document.body.addEventListener('htmx:afterSwap', function (evt) {
+        observeScrollReveal();
     });
 
-    revealElements.forEach(el => {
-        observer.observe(el);
-    });
-//
-//     const hackText = document.getElementById('hack-text');
-//     const targetText = "Mobile & Full-Stack Developer, Software Engineering Student";
-//     let currentText = '';
-//     let index = 0;
-//
-//     function getRandomChar() {
-//         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
-//         return chars.charAt(Math.floor(Math.random() * chars.length));
-//     }
-//
-//     function updateText() {
-//         if (index < targetText.length) {
-//             currentText = targetText.slice(0, index) + getRandomChar().repeat(targetText.length - index);
-//             hackText.textContent = currentText;
-//             index++;
-//             setTimeout(updateText, 50); // Speed of random characters
-//         } else {
-//             let finalIndex = 0;
-//             const interval = setInterval(() => {
-//                 if (finalIndex < targetText.length) {
-//                     currentText = targetText.slice(0, finalIndex + 1) + getRandomChar().repeat(targetText.length - finalIndex - 1);
-//                     hackText.textContent = currentText;
-//                     finalIndex++;
-//                 } else {
-//                     clearInterval(interval);
-//                     hackText.textContent = targetText; // Ensure final text is exact
-//                 }
-//             }, 100); // Speed of reveal
-//         }
-//     }
-//
-//     updateText();
-});
-//
-// Form submission feedback (if using contact form with id 'contact-form')
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const form = this;
-        const messageDiv = document.getElementById('form-message');
+    // Form submission feedback (if using contact form with id 'contact-form')
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const messageDiv = document.getElementById('form-message');
 
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    messageDiv.innerHTML = '<p style="color:green;">Message sent successfully!</p>';
-                    form.reset();
-                } else {
-                    messageDiv.innerHTML = '<p style="color:red;">Failed to send message. Please try again.</p>';
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
                 }
             })
-            .catch(error => {
-                messageDiv.innerHTML = '<p style="color:red;">An error occurred. Please try again later.</p>';
-            });
-    });
-}
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        messageDiv.innerHTML = '<p style="color:green;">Message sent successfully!</p>';
+                        form.reset();
+                    } else {
+                        messageDiv.innerHTML = '<p style="color:red;">Failed to send message. Please try again.</p>';
+                    }
+                })
+                .catch(error => {
+                    messageDiv.innerHTML = '<p style="color:red;">An error occurred. Please try again later.</p>';
+                });
+        });
+    }
+});
