@@ -177,6 +177,44 @@ div.rounded-xl:hover {
     background: transparent;
 }
 
+/*@media (max-width: 767px) {*/
+/*    #project-modal {*/
+/*        padding-top: 0 !important;*/
+/*    }*/
+/*    #project-modal > #close-modal-btn {*/
+/*        top: 0.5rem !important;*/
+/*        right: 0.5rem !important;*/
+/*    }*/
+/*    #project-modal .custom-scroll {*/
+/*        padding-top: 2.5rem !important; !* Add space for the button if needed *!*/
+/*    }*/
+/*}*/
+
+@media (max-width: 767px) {
+    #project-modal {
+        padding-top: 0 !important;
+        min-height: 300px; /* Ensures enough height for absolute positioning */
+    }
+
+    #close-modal-btn {
+        position: absolute !important;
+        top: 0.5rem !important;
+        right: 0.5rem !important;
+        /*left: auto !important;*/
+        margin: 0 !important;
+    }
+
+    #project-modal .custom-scroll {
+        padding-top: 2.5rem !important;
+    }
+
+    .project-title-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+}
+
 #project-modal .custom-scroll::-webkit-scrollbar-thumb {
     background: #eaeaea;
     border-radius: 8px;
