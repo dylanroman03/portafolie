@@ -3,41 +3,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (menuToggle && navMenu) {
-        // Toggle menú móvil
+        // Ensure menu is hidden on mobile at initial load
+        if (window.innerWidth < 768) {
+            navMenu.classList.add('hidden');
+        } else {
+            navMenu.classList.remove('hidden');
+        }
+
+        // Toggle mobile menu
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('hidden');
         });
 
-        // Cierra el menú móvil al hacer click en una opción
+        // Close mobile menu when a link is clicked
         navMenu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) { // Solo en móvil
+                if (window.innerWidth < 768) {
                     navMenu.classList.add('hidden');
+                } else {
+                    navMenu.classList.remove('hidden');
                 }
             });
         });
-
-        // Forzar estado correcto al cambiar de tamaño
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                navMenu.classList.remove('hidden');
-            } else {
-                navMenu.classList.add('hidden');
-            }
-        });
     }
 
-    // Scroll effect for navbar
-    // document.addEventListener('scroll', () => {
-    //     const navbar = document.getElementById('navbar');
-    //     if (navbar) {
-    //         if (window.scrollY > 50) {
-    //             navbar.classList.add('scrolled');
-    //         } else {
-    //             navbar.classList.remove('scrolled');
-    //         }
-    //     }
-    // });
+    // Scroll effect for navbar (optional, uncomment if needed)
+    document.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+    });
 
     // Scroll reveal observer function
     function observeScrollReveal() {
@@ -98,10 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Delegación para abrir modal
+    // Delegation for opening modal
     document.body.addEventListener('click', function (e) {
         if (e.target.closest('.card-action')) return;
-        // Busca si hizo click en un card o dentro de un card
         let card = e.target.closest('.project-card');
         if (card) {
             const project = card.getAttribute('data-project');
@@ -109,10 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Botón cerrar
+    // Close modal button
     document.getElementById('close-modal-btn').onclick = closeProjectModal;
 
-    // Atajo para cerrar el modal con la tecla Escape
+    // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
         const overlay = document.getElementById('project-modal-overlay');
         if (!overlay.classList.contains('hidden') && (e.key === 'Escape' || e.key === 'Esc')) {
@@ -120,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cierra el modal clicando el fondo (overlay)
+    // Close modal by clicking overlay
     document.getElementById('project-modal-overlay').onclick = function (e) {
         if (e.target === this) closeProjectModal();
     };
@@ -129,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function showProjectModal(project) {
     const overlay = document.getElementById('project-modal-overlay');
     const modalContent = document.getElementById('modal-content');
-    // Puedes usar fetch/htmx para cargar info detallada o ponerlo aquí
     fetch(`projects/details/${project}.html`)
         .then(res => res.text())
         .then(html => {
