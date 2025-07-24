@@ -59,15 +59,16 @@
             My passion lies in crafting seamless user experiences and building robust mobile/web apps.
         </p>
         <div class="flex gap-6 items-end mb-8">
-            <a href="mailto:romand.buitrago+dev@gmail.com"
+            <a href="mailto:romand.buitrago+dev@gmail.com" target="_blank"
                class="[background-color:var(--color-primary)] hover:[background-color:var(--color-primary-hover)] text-white px-6 py-2 rounded-lg font-semibold transition">
                 <i class="fa-solid fa-envelope"></i>
                 Contact Me
             </a>
-            <a href="https://github.com/dylanroman03" class="text-2xl" style="color:var(--color-text-secondary)"
-               aria-label="GitHub"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7" class="text-2xl"
+            <a href="https://github.com/dylanroman03" target="_blank"
+               class="text-2xl" style="color:var(--color-text-secondary)"
+               aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://ve.linkedin.com/in/dylan-roman-buitrago-5193092a7" target="_blank"
+               class="text-2xl"
                style="color:var(--color-text-secondary)" aria-label="LinkedIn"><i
                     class="fab fa-linkedin"></i></a>
         </div>
@@ -130,4 +131,21 @@
 
 <script src="assets/js/main.js"></script>
 </body>
+
+<div id="project-modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 hidden">
+    <div id="project-modal"
+         class="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden animate-fadeIn flex flex-col">
+        <!-- Botón cerrar (X) -->
+        <button id="close-modal-btn"
+                class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold focus:outline-none z-10">
+            &times;
+        </button>
+        <!-- Contenido scrolleable con padding -->
+        <div class="w-full max-h-[90vh] overflow-y-auto p-8 custom-scroll">
+            <div id="modal-content">
+                <!-- Tu contenido aquí -->
+            </div>
+        </div>
+    </div>
+</div>
 </html>

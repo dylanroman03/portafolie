@@ -1,0 +1,78 @@
+<!-- Galería de imágenes -->
+<!--<img src="assets/images/projects/adn_mobile/miniatura.png" alt="Project Image"-->
+<!--     class="object-contain h-full max-w-full transition-all duration-300" id="main-gallery-image">-->
+<div class="relative w-full h-56 md:h-72 flex items-center justify-center rounded-t-2xl overflow-hidden">
+    <!-- Flecha izquierda -->
+    <button id="gallery-prev"
+            class="btn-no-animation absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-[var(--color-title)] rounded-full p-2 shadow-md z-10 transition"
+            aria-label="Anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Imagen principal -->
+    <img id="main-gallery-image"
+         src="assets/images/projects/adn_mobile/1.png"
+         alt="Project Image"
+         class="object-contain h-full max-w-full transition-all duration-500 z-0">
+
+    <!-- Flecha derecha -->
+    <button id="gallery-next"
+            class="btn-no-animation absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-[var(--color-title)] rounded-full p-2 shadow-md z-10 transition"
+            aria-label="Siguiente">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div id="gallery-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10"></div>
+</div>
+<!-- Si quieres más imágenes, puedes poner miniaturas o flechas aquí -->
+
+<!-- Contenido principal -->
+<!-- Título -->
+<h3 class="font-bold text-2xl mb-3" style="color:var(--color-title)">ADN Mobile - App de Ventas</h3>
+
+<!-- Etiquetas -->
+<div class="flex flex-wrap gap-2 mb-6">
+    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Flutter</span>
+    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">Dart</span>
+    <span class="bg-[var(--color-border)] text-[var(--color-title)] rounded-full px-3 py-1 text-xs font-mono">SQLite</span>
+</div>
+
+<!-- Información / cuerpo -->
+<div class="text-sm leading-relaxed" style="color:var(--color-secondary)">
+    <p>
+        ADN Mobile is an application developed in <b>Flutter</b>, designed to optimize field sales operations,
+        seamlessly
+        integrating with ADN Software’s enterprise management and accounting systems. Currently, in production, the app
+        boasts over <b>1,000 active users</b> and is utilized by various companies, offering a robust and versatile
+        solution for sales and logistics management, both <b>online and offline</b>.
+    </p>
+    <br>
+    <b>Key Features:</b>
+    <ul class="list-disc pl-5">
+        <li>
+            <b>Invoice Printing:</b> Generate and print invoices directly from mobile devices using Bluetooth printers.
+        </li>
+        <li><b>Tracking and Visits:</b> Real-time location logging to document client visits, enhancing traceability.
+        </li>
+        <li><b>Inventory Management:</b> Efficient control of products and categories with stock management and advanced
+            filters for clients and products.
+        </li>
+        <li><b>Sales Modalities:</b> Support for self-sale, pre-sale, and cart management, allowing users to save
+            purchases
+            for later processing.
+        </li>
+        <li><b>Transport Dispatch:</b> Streamlines the management of delivery guides for logistics operations.</li>
+        <li><b>Real-Time Synchronization:</b> Automatic data updates with ADN Software’s central system.</li>
+        <li><b>Multi-Account Support:</b> Enables management of multiple user accounts.</li>
+        <li><b>Collections Management:</b> Tracks collections with the option to block users due to outstanding debts.
+        </li>
+    </ul>
+    <br>
+    <p>
+        Built with a focus on scalability and user experience, ADN Mobile has transformed how businesses manage their
+        sales
+        and distribution processes, delivering a comprehensive solution that combines mobility, efficiency, and
+        connectivity.
+    </p>
+</div>

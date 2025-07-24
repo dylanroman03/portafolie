@@ -21,6 +21,11 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
+.btn-no-animation {
+    transition: none !important;
+    transform: none !important;
+}
+
 a:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -149,4 +154,28 @@ div.rounded-xl:hover {
 
 #menu-toggle {
     display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96);}
+    to { opacity: 1; transform: scale(1);}
+}
+.animate-fadeIn {
+    animation: fadeIn 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+#project-modal .custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #eaeaea #ffffff;
+}
+#project-modal .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+#project-modal .custom-scroll::-webkit-scrollbar-thumb {
+    background: #eaeaea;
+    border-radius: 8px;
+}
+#project-modal .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #e85a38;
 }

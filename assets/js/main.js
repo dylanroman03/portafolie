@@ -4,15 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('hidden');
         });
 
         // Close menu when a link is clicked
         navMenu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+                if (window.innerWidth < 768) { // Solo en móvil
+                    navMenu.classList.add('hidden');
+                }
             });
         });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                navMenu.classList.remove('hidden');
+            } else {
+                navMenu.classList.add('hidden');
+            }
+        });
+
     }
 
     // Scroll effect for navbar
@@ -26,6 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // document.addEventListener('click', function(e) {
+    //     // Si el menú está abierto, en mobile, y haces click fuera del menú y del botón
+    //     if (
+    //         !navMenu.classList.contains('hidden') &&
+    //         window.innerWidth < 768 &&
+    //         !navMenu.contains(e.target) &&
+    //         e.target !== menuToggle
+    //     ) {
+    //         navMenu.classList.add('hidden');
+    //     }
+    // });
 
     // Scroll reveal observer function
     function observeScrollReveal() {
@@ -59,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission feedback (if using contact form with id 'contact-form')
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const form = this;
             const messageDiv = document.getElementById('form-message');
@@ -85,4 +108,109 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // Delegación para abrir modal
+    document.body.addEventListener('click', function (e) {
+        if (e.target.closest('.card-action')) return;
+        // Busca si hizo click en un card o dentro de un card
+        let card = e.target.closest('.project-card');
+        if (card) {
+            const project = card.getAttribute('data-project');
+            showProjectModal(project);
+        }
+    });
+
+    // Botón cerrar
+    document.getElementById('close-modal-btn').onclick = closeProjectModal;
+
+    // Atajo para cerrar el modal con la tecla Escape
+    document.addEventListener('keydown', function(e) {
+        const overlay = document.getElementById('project-modal-overlay');
+        if (!overlay.classList.contains('hidden') && (e.key === 'Escape' || e.key === 'Esc')) {
+            closeProjectModal();
+        }
+    });
+
+    // Cierra el modal clicando el fondo (overlay)
+    document.getElementById('project-modal-overlay').onclick = function (e) {
+        if (e.target === this) closeProjectModal();
+    };
 });
+
+function showProjectModal(project) {
+    const overlay = document.getElementById('project-modal-overlay');
+    const modalContent = document.getElementById('modal-content');
+    // Puedes usar fetch/htmx para cargar info detallada o ponerlo aquí
+    fetch(`projects/details/${project}.html`)
+        .then(res => res.text())
+        .then(html => {
+            modalContent.innerHTML = html;
+            overlay.classList.remove('hidden');
+
+            const galleryLength = {
+                "adn_mobile": 3,
+            };
+
+            const images = Array.from({length: galleryLength[project]}, (_, i) =>
+                `assets/images/projects/${project}/${i+1}.png`
+            );
+            setupGallery(images);
+        });
+}
+
+function closeProjectModal() {
+    document.getElementById('project-modal-overlay').classList.add('hidden');
+}
+
+function setupGallery(images) {
+    let current = 0;
+    let intervalId = null;
+
+    const imgEl = document.getElementById('main-gallery-image');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    const indicators = document.getElementById('gallery-indicators');
+
+    function render() {
+        imgEl.src = images[current];
+        indicators.innerHTML = images.map((_, i) =>
+            `<button class="btn-no-animation w-2 h-2 rounded-full mx-1 ${i === current ? 'bg-[var(--color-primary)]' : 'bg-gray-300'}"></button>`
+        ).join('');
+    }
+
+    function next() {
+        current = (current + 1) % images.length;
+        render();
+    }
+
+    function prev() {
+        current = (current - 1 + images.length) % images.length;
+        render();
+    }
+
+    function goto(i) {
+        current = i;
+        render();
+    }
+
+    nextBtn.onclick = () => { next(); restart(); };
+    prevBtn.onclick = () => { prev(); restart(); };
+    indicators.onclick = (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const idx = [...indicators.children].indexOf(e.target);
+            goto(idx);
+            restart();
+        }
+    };
+
+    function autoplay() {
+        intervalId = setInterval(next, 2700);
+    }
+    function restart() {
+        clearInterval(intervalId);
+        autoplay();
+    }
+
+    render();
+    autoplay();
+}
