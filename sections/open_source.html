@@ -1,0 +1,67 @@
+<div class="flex-1">
+    <div class="flex items-center gap-4 mb-2">
+        <h2 class="text-3xl font-bold" style="color:var(--color-title)">Open Source Contributions</h2>
+        <span class="hidden md:inline-block flex-1 h-px" style="background:var(--color-border)"></span>
+    </div>
+    <div class="[background-color:var(--color-primary)] w-20 h-1 rounded mb-8"></div>
+    <div class="flex flex-col gap-6">
+
+        <!-- Single card for Oh My Zsh -->
+        <div class="border rounded-xl p-6 shadow-sm scroll-reveal opacity-0 translate-y-8 transition duration-700"
+            style="border-color:var(--color-border); background:var(--color-card)">
+
+            <!-- Project header -->
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-brands fa-github [color:var(--color-primary)]"></i>
+                <span class="font-semibold text-lg" style="color:var(--color-title)">Oh My Zsh · Contributor</span>
+            </div>
+            <div class="font-mono text-sm mb-1" style="color:var(--color-text-secondary)">ohmyzsh/ohmyzsh · GitHub</div>
+            <div class="font-mono text-xs mb-3" style="color:var(--color-secondary)">Active contributions since 2025
+            </div>
+
+            <!-- Generic subtitle -->
+            <p class="text-sm mb-5" style="color:var(--color-secondary)">
+                Fixed bugs, added new features, and improved user experience across multiple merged pull requests.
+            </p>
+
+            <!-- PR list as quick-access links (no descriptions) with extra margin -->
+            <div class="mt-2 space-y-3">
+                <!-- PR #13706 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-5 text-center [color:var(--color-primary)]">●</div>
+                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        <a href="https://github.com/ohmyzsh/ohmyzsh/pull/13706" target="_blank"
+                            rel="noopener noreferrer"
+                            class="font-mono text-sm font-semibold [color:var(--color-title)] hover:underline decoration-dotted">
+                            git prompt: extra %% with histsubstpattern
+                        </a>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded-full ml-2"
+                            style="background:var(--color-border); color:var(--color-text-secondary)">#13706</span>
+                    </div>
+                </div>
+
+                <!-- PR #13734 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-5 text-center [color:var(--color-primary)]">●</div>
+                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        <a href="https://github.com/ohmyzsh/ohmyzsh/pull/13734" target="_blank"
+                            rel="noopener noreferrer"
+                            class="font-mono text-sm font-semibold [color:var(--color-title)] hover:underline decoration-dotted">
+                            extract: add -t/--to-directory option
+                        </a>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded-full ml-2"
+                            style="background:var(--color-border); color:var(--color-text-secondary)">#13734</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer with merged PRs count -->
+            <div class="mt-5 pt-3 text-xs font-mono"
+                style="color:var(--color-text-secondary); border-top:1px solid var(--color-border)">
+                <i class="fa-regular fa-circle-check" style="color:var(--color-primary)"></i> 2 pull requests merged ·
+                more to come
+            </div>
+        </div>
+
+    </div>
+</div>
