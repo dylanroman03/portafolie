@@ -138,6 +138,7 @@ function showProjectModal(project) {
                 "adn_mobile": 6,
                 "easy_resend": 1,
                 "ciclope": 1,
+                "cpu_flow_simulator": 1,
             };
 
             const images = Array.from({length: galleryLength[project]}, (_, i) =>
